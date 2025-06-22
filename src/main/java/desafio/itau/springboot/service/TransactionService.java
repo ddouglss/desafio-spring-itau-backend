@@ -33,8 +33,8 @@ public class TransactionService {
 
         // Explicação da linha abaixo:
         return transactions.stream()                            // 1. Cria um stream com a fila de transações
-                .filter(t -> t.getDataHora()          // 2. Filtra transações que ocorreram nos últimos 60s
-                        .isAfter(now.minusSeconds(60)))
+//                .filter(t -> t.getDataHora()          // 2. Filtra transações que ocorreram nos últimos 60s
+//                        .isAfter(now.minusSeconds(60)))
                 .mapToDouble(Transaction::getValor)            // 3. Transforma cada transação em um valor double (valor da transação)
                 .summaryStatistics();                          // 4. Gera um resumo com: count, sum, min, average e max
     }
