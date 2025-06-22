@@ -3,8 +3,6 @@
 **Desafio técnico proposto pelo Itaú Unibanco** para avaliação de habilidades em desenvolvimento e engenharia de software.  
 Este projeto consiste em uma **API REST construída com Spring Boot** para **registrar transações e calcular estatísticas** dos últimos 60 segundos, com **armazenamento em memória** e **sem uso de banco de dados**.
 
-📺 [Vídeo de explicação no YouTube](https://youtu.be/uke3i4uOejs)
-
 ---
 
 ## 📌 Tecnologias Utilizadas
