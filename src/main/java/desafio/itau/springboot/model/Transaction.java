@@ -19,4 +19,7 @@ public class Transaction {
     public OffsetDateTime getDataHora() {
         return dataHora;
     }
+
+    public void add(Transaction transactions) {
+    }
 }
