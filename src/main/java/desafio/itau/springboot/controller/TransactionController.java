@@ -22,17 +22,13 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<Void> createTransaction(@Valid @RequestBody TransactionRequest request){
-        if (request.getDataHora().isAfter(OffsetDateTime.now())){
+        if (request.getDataHora().isAfter(OffsetDateTime.now()) || request.getValor() <= 0){
            return ResponseEntity.unprocessableEntity().build();
         }
         transactionService.addTransaction(new Transaction(request.getValor(), request.getDataHora()));
         return  ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @DeleteMapping
-    public ResponseEntity<Void> clearTransaction( ){
-        transactionService.clerTrasactions();
-        return ResponseEntity.ok().build();
-    }
+
 
 }
