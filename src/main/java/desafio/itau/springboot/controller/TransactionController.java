@@ -29,6 +29,10 @@ public class TransactionController {
         return  ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-
+    @DeleteMapping
+    public ResponseEntity<Void> clearTransaction( ){
+        transactionService.clerTrasactions();
+        return ResponseEntity.ok().build();
+    }
 
 }
